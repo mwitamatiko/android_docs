@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragement_container_view"
+    app:startDestination="@id/bioData1Fragment2">
+    <fragment
+        android:id="@+id/bioData1Fragment2"
+        android:name="com.example.raos.fragments.bioData1Fragment"
+        android:label="fragment_bio_data1"
+        tools:layout="@layout/fragment_bio_data1" >
+        <action
+            android:id="@+id/action_bioData1Fragment2_to_bioData2Fragment2"
+            app:destination="@id/bioData2Fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/bioData2Fragment2"
+        android:name="com.example.raos.fragments.bioData2Fragment"
+        android:label="fragment_bio_data2"
+        tools:layout="@layout/fragment_bio_data2" >
+        <action
+            android:id="@+id/action_bioData2Fragment2_to_bioData3Fragment2"
+            app:destination="@id/bioData3Fragment2" />
+        <action
+            android:id="@+id/action_bioData2Fragment2_to_bioData1Fragment2"
+            app:destination="@id/bioData1Fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/bioData3Fragment2"
+        android:name="com.example.raos.fragments.bioData3Fragment"
+        android:label="fragment_bio_data3"
+        tools:layout="@layout/fragment_bio_data3" >
+        <action
+            android:id="@+id/action_bioData3Fragment2_to_viewOutputFragment"
+            app:destination="@id/viewOutputFragment" />
+        <action
+            android:id="@+id/action_bioData3Fragment2_to_bioData2Fragment2"
+            app:destination="@id/bioData2Fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewOutputFragment"
+        android:name="com.example.raos.fragments.viewOutputFragment"
+        android:label="fragment_view_output"
+        tools:layout="@layout/fragment_view_output" >
+        <action
+            android:id="@+id/action_viewOutputFragment_to_submitImages"
+            app:destination="@id/submitImages" />
+        <action
+            android:id="@+id/action_viewOutputFragment_to_bioData3Fragment2"
+            app:destination="@id/bioData3Fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/submitImages"
+        android:name="com.example.raos.fragments.SubmitImages"
+        android:label="fragment_submit_images"
+        tools:layout="@layout/fragment_submit_images" >
+        <action
+            android:id="@+id/action_submitImages_to_viewOutputFragment"
+            app:destination="@id/viewOutputFragment" />
+    </fragment>
+</navigation>
